@@ -1,6 +1,9 @@
 package com.madhura.ecommerce.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -11,6 +14,8 @@ import java.util.Date;
 @Entity
 @Table(name="product")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
 
     @Id
@@ -18,6 +23,7 @@ public class Product {
     @Column(name = "id")
     private Long id;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     private ProductCategory category;
@@ -50,5 +56,6 @@ public class Product {
     @Column(name = "last_updated")
     @UpdateTimestamp
     private Date lastUpdated;
+
 }
 
