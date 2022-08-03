@@ -1,14 +1,13 @@
-package com.madhura.ecommerce.controllers;
+package com.madhura.ecommerce.controller;
 
 import com.madhura.ecommerce.entity.Product;
-import com.madhura.ecommerce.service.impl.ProductService;
+import com.madhura.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/api/product")
+@CrossOrigin("http://localhost:4200")
 public class ProductController {
 
     @Autowired
@@ -34,10 +33,10 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
-    @GetMapping("/name/{name}")
-    public List<Product> findProductByName(@PathVariable String name){
-        return productService.getProductByName(name);
-    }
+//    @GetMapping("/name/{name}")
+//    public List<Product> findProductByName(@PathVariable String name){
+//        return productService.getProductByName(name);
+//    }
 
 
 }

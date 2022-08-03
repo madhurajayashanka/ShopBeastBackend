@@ -1,4 +1,4 @@
-package com.madhura.ecommerce.service.impl;
+package com.madhura.ecommerce.service;
 
 import com.madhura.ecommerce.dao.ProductRepository;
 import com.madhura.ecommerce.entity.Product;
@@ -21,9 +21,9 @@ public class ProductService {
         return repository.findById(id).orElse(null);
     }
 
-    public List<Product> getProductByName(String name){
-        return repository.findByNameContaining(name);
-    }
+//    public List<Product> getProductByName(String name){
+//        return repository.findByNameContaining(name);
+//    }
 
     public String deleteProduct(Long id){
         repository.deleteById(id);
