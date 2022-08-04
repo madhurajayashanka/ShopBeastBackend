@@ -3,6 +3,7 @@ package com.madhura.ecommerce.controller;
 import com.madhura.ecommerce.entity.Product;
 import com.madhura.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -14,6 +15,7 @@ public class ProductController {
     private ProductService productService;
 
     @PostMapping("/add")
+    @PreAuthorize("hasRole('Admin')")
     public Product addProduct(@RequestBody Product product){
         return productService.saveProduct(product);
     }
