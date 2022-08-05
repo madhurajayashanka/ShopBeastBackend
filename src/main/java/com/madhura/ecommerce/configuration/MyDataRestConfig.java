@@ -50,7 +50,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 
         List<Class> entityClasses = new ArrayList<>();
 
-        for (EntityType tempEntityType : entities){
+        for (EntityType tempEntityType : entities) {
             entityClasses.add(tempEntityType.getJavaType());
         }
 

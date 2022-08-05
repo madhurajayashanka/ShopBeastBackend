@@ -15,22 +15,22 @@ public class ProductController {
 
     @PostMapping("/add")
     @PreAuthorize("hasRole('Admin')")
-    public Product addProduct(@RequestBody Product product){
+    public Product addProduct(@RequestBody Product product) {
         return productService.saveProduct(product);
     }
 
     @PutMapping("/update")
-    public Product updateProduct(@RequestBody Product product){
+    public Product updateProduct(@RequestBody Product product) {
         return productService.updateProduct(product);
     }
 
     @DeleteMapping("/delete/{id}")
-    public String deleteProduct(@PathVariable Long id){
+    public String deleteProduct(@PathVariable Long id) {
         return productService.deleteProduct(id);
     }
 
     @GetMapping("/find/{id}")
-    public Product findProductById(@PathVariable Long id){
+    public Product findProductById(@PathVariable Long id) {
         return productService.getProductById(id);
     }
 

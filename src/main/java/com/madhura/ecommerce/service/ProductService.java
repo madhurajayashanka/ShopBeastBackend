@@ -13,11 +13,11 @@ public class ProductService {
     @Autowired
     private ProductRepository repository;
 
-    public Product saveProduct(Product product){
+    public Product saveProduct(Product product) {
         return repository.save(product);
     }
 
-    public Product getProductById(Long id){
+    public Product getProductById(Long id) {
         return repository.findById(id).orElse(null);
     }
 
@@ -25,12 +25,12 @@ public class ProductService {
 //        return repository.findByNameContaining(name);
 //    }
 
-    public String deleteProduct(Long id){
+    public String deleteProduct(Long id) {
         repository.deleteById(id);
-        return "Product "+id+" removed.";
+        return "Product " + id + " removed.";
     }
 
-    public Product updateProduct(Product product){
+    public Product updateProduct(Product product) {
         Product existingProduct = repository.findById(product.getId())
                 .orElse(null);
         existingProduct.setCategory(product.getCategory());

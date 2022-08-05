@@ -30,19 +30,19 @@ public class UserController {
 
 
     @GetMapping({"/hi"})
-    public String hii(){
+    public String hii() {
         return "heee";
     }
 
     @GetMapping({"/forAdmin"})
     @PreAuthorize("hasRole('Admin')")
-    public String forAdmin(){
+    public String forAdmin() {
         return "This URL is only accessible to the admin";
     }
 
     @GetMapping({"/forUser"})
     @PreAuthorize("hasRole('User')")
-    public String forUser(){
+    public String forUser() {
         return "This URL is only accessible to the user";
     }
 }
