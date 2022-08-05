@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-
+@CrossOrigin
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
     Page<Product> findByCategoryId(@RequestParam("id") Long id, Pageable pageable);
