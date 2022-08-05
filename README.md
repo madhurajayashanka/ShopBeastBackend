@@ -21,11 +21,11 @@
 
 I have made a web app called "Shop Beast" as a Fullstack web application. 
 It is a web app for a shop called Shop Beast to show the products to sell. Anyone can go into the site and look at the products, get some details about them, add them to the card, and purchase the item. 
-Only the shop admin can add new products (Authorization) to the site. If users want to buy an item, they need to create a free account on the site.
+**Only the shop admin can add new products** (Authorization) to the site. If users want to buy an item, they need to create a free account on the site.
 
-I used Angular for the Frontend, Spring(spring-boot and spring Security) for the Backend, and MySql for Database. The authorization part is done with Spring security and used JWT token support for login and some other functionalities.
+I used **Angular** for the Frontend, **Spring(spring-boot and spring Security)** for the Backend, and **MySql** for Database. The authorization part is done with **Spring security** and used **JWT** token support for login and some other functionalities.
 
-The site Supports pagination, dynamic cart adding and removing with total value and total quantity, and many more. I will continuously build this project and hope to add some new features.
+The site Supports **pagination**, dynamic **cart adding** and **removing** with total value and total quantity, and many more. I will continuously build this project and hope to add some new features.
 
 
 
